@@ -18,42 +18,51 @@ FRONT-END:
     (All fetch request should be kept in a seperate file)
 _________________________
 BACK-END:
+    UseState to hold data used in the front end.
 
+    Router should be used to get data out of the database
+    (all functions can be imported to the file.)
+
+    Send the right data back when called using a fetch request.
 _________________________
 DATABASE:
+    Store the data seeded into it and return the correct data when neccessary.
+    (Data gets returned using client queries)
 
+    Add new data when it is called.
+    (also done using client queries)
 _________________________
 -------------------------
 -->
 <!--
 * package.json {
     * Install {
-        React
-        React-Dom
-        React-Router
-        React-Scripts
-        Morgan
-        Cors
-        Nodemon
-        Express
-        PG (postgreSQL)
-        DOTENV
-        BCRYPT
+        React √
+        React-Dom √
+        React-Router √
+        React-Scripts √
+        Morgan √
+        Cors √
+        Nodemon √
+        Express √
+        PG (postgreSQL) √
+        DOTENV √
+        BCRYPT √
     }
-    * Fix Scripts
+    * Fix Scripts √
 }
 * Database {
     * Create Database in PSQL √
-    * Create Seed.js
-    * Seed db with dummy data
-    * Test db
-    * Create Projects.js for db functions
+    * Create Seed.js √
+    * Seed db with dummy data v
+    * Test db √
+    * Create Projects.js for db functions √
 }
 * Back-End {
     * Create API {
-        * Index.js
-        * Projects.js
-        * Test API with PostMan
+        * Index.js √
+        * Projects.js √
+        * Test API with PostMan √
     }
 }
 * Front-End {
@@ -69,11 +78,11 @@ _________________________
             About.css
             Skills.css
         }
-        * NavBar.js
-        * Index.js
-        * Projects.js
-        * Home.js
-        * About.js
+        * NavBar.js √
+        * Index.js √
+        * Projects.js √
+        * Home.js √
+        * About.js √
         * Skills.js
     }
 }

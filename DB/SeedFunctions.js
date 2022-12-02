@@ -1,20 +1,25 @@
 const client = require('./Index');
 
-const AddNewProject = async (name, description) => {
+const AddNewProject = async (
+  name,
+  description,
+  projectimg,
+  codeimg,
+  codedisc
+) => {
   const response = await client.query(
     `
-INSERT INTO projects (name,description)
-VALUES ($1,$2)
+INSERT INTO projects (name,description,projectimg,codeimg,codedisc)
+VALUES ($1,$2,$3,$4,$5)
 RETURNING *;
 `,
-    [name, description]
+    [name, description, projectimg, codeimg, codedisc]
   );
   return response.rows[0];
 };
 
 const GetAllProjects = async () => {
   try {
-    console.log('starting');
     const { rows: response } = await client.query(`
   SELECT * FROM projects;
   `);

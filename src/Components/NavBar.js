@@ -1,12 +1,19 @@
 import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
-    <>
-      <img />
-      <Link to="/">Home</Link>
-      <Link to="/Projects">Projects</Link>
-      <Link to="/About">About</Link>
-    </>
+    <div id="navbar">
+      <b id="navbarlink">
+        <Link to="/">Home</Link>
+      </b>
+      |
+      <b id="navbarlink">
+        <Link to="/Projects">Projects</Link>
+      </b>
+      |
+      <b id="navbarlink">
+        <Link to="/About">About</Link>
+      </b>
+    </div>
   );
 };
 export default NavBar;
